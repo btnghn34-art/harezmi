@@ -1,0 +1,5 @@
+{
+  "name": "Medya Zorbalık Analizi",
+  "description": "Medya içeriklerindeki (kitap, şarkı, film) zorbalık ve şiddet unsurlarını Türkçe kültürel bağlamda analiz eden yapay zeka uygulaması.",
+  "requestFramePermissions": []
+}
