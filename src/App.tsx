@@ -141,6 +141,12 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
+            <div className="flex justify-center mb-6">
+              <span className="px-4 py-1.5 bg-green-100 text-green-700 text-sm font-semibold rounded-full border border-green-200 shadow-sm flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Tamamen Ücretsiz Analiz
+              </span>
+            </div>
             <span className="inline-block px-3 py-1 rounded-full bg-rose-50 text-rose-600 text-xs font-bold uppercase tracking-wider mb-4">
               Yapay Zeka Destekli Analiz
             </span>

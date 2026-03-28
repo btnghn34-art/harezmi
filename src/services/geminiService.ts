@@ -71,6 +71,13 @@ const ANALYSIS_SCHEMA = {
 };
 
 export async function analyzeMedia(name: string, type: MediaType): Promise<AnalysisResult> {
+  // AI Studio'da anahtar genellikle process.env.GEMINI_API_KEY veya VITE_GEMINI_API_KEY olarak gelir
+  const apiKey = process.env.GEMINI_API_KEY || (import.meta as any).env?.VITE_GEMINI_API_KEY;
+  
+  if (!apiKey || apiKey === 'MY_GEMINI_API_KEY' || apiKey === '') {
+    throw new Error("Sistem Hazırlanıyor: Bu uygulama tamamen ücretsizdir. Analizlerin başlayabilmesi için lütfen AI Studio panelinden API anahtarınızı (Secrets) tanımlayın.");
+  }
+
   const model = "gemini-3-flash-preview";
   
   const systemInstruction = `Sen Türkçe dil ve Türkiye kültürü konusunda uzman bir içerik analiz yapay zekasısın.
